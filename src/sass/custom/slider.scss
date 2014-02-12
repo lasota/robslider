@@ -1,0 +1,55 @@
+#slider-wrapper {
+    padding: 0;
+
+    #slider-listwrapper {
+        overflow: hidden;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            position: relative;
+
+            li {
+                display: none;
+                position: absolute;
+                
+                img {
+                    display: block;
+                    height: auto;
+                    width: 100%;
+                }
+
+                &.current {
+                    display: block;
+                    z-index: 2;
+                }
+
+                &.prev {
+                    display: block;
+                    z-index: 1;
+                }
+
+                &.next {
+                    display: block;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    #robslider-pagination {
+        padding: 10px 0;
+
+        div {
+            background: black;
+            display: inline-block;
+            height: 10px;
+            margin-left: 10px;
+            width: 10px;
+
+            &.active {
+                background: orange;
+            }
+        }
+    }
+}
