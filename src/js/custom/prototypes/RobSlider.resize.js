@@ -3,6 +3,6 @@ RobSlider.Slider.prototype.resize = function () {
 
     // Rerun functions if window is resized
     $(window).bind('resize', function () {
-        _this.dimensions();console.log('resize');
+        _this.dimensions();
     });
 }

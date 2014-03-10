@@ -15,4 +15,6 @@ RobSlider.Slider.prototype.dimensions = function ()
     this.list.find('.prev').css('left', this.farLeft);
     this.list.find('.next').css('left', this.farRight);
 
+    $('body').trigger('RobSliderDimensionsEnd');
+
 }

@@ -29,6 +29,7 @@ RobSlider.Slider = function(params)
     this.listItems = this.list.find('li');
 
     // Set some global variables
+    this.initialLoad = 0;
     this.sliderWidth = this.defaults.sliderWidth;
     this.NumberOfSlides = this.listItems.length;
     this.currentIndex = 0;
@@ -60,9 +61,9 @@ RobSlider.Slider = function(params)
     }
     
     this.resize();
+    
     // Cross browser document ready fires at different times in different browsers
-    $(window).load(function(){
-        that.dimensions();
-    });
+    that.dimensions();
+    
 
 }

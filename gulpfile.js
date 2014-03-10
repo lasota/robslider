@@ -47,5 +47,5 @@ gulp.task('watch', function () {
   gulp.watch(paths.customCss, ['css']);
 });
 
-gulp.task('default', ['css', 'headerScripts', 'vendorScripts', 'customScripts']);
-gulp.task('watch', ['css', 'headerScripts', 'vendorScripts', 'customScripts', 'watch']);
+gulp.task('default', ['css', 'headerScripts', 'vendorScripts', 'customScripts', 'watch']);
+gulp.task('nowatch', ['css', 'headerScripts', 'vendorScripts', 'customScripts']);
