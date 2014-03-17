@@ -16,6 +16,8 @@ RobSlider.Slider.prototype.pagination = function () {
         this.pagination.append('<div>' + '</div>');
     }
 
+    $('body').trigger('RobSliderPaginationBuilt');
+
     // Make the current slide the active item
     this.pagination.find('div:eq(' + this.currentIndex + ')')
             .addClass('active');
@@ -34,14 +36,14 @@ RobSlider.Slider.prototype.pagination = function () {
 
             if (_this.currentIndex > thisIndex) {
                 _this.listItems.removeClass('prev next');
-                _this.list.find('li[data-slidenumber="' + thisIndex + '"]').addClass('prev');
+                _this.list.find('li[data-slidenumber="' + thisIndex + '"]').addClass('prev').css('left', -_this.sliderWidth);
                 _this.currentIndex = thisIndex;
                 _this.slideLeft = true;
             }
 
             if (_this.currentIndex < thisIndex) {
                 _this.listItems.removeClass('next prev');
-                _this.list.find('li[data-slidenumber="' + thisIndex + '"]').addClass('next');
+                _this.list.find('li[data-slidenumber="' + thisIndex + '"]').addClass('next').css('left', _this.sliderWidth);
                 _this.currentIndex = thisIndex;
             }
 
