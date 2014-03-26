@@ -3,7 +3,7 @@ var RobSlider = RobSlider || {};
 
 RobSlider.Slider = function(params)
 {
-    var that = this;
+    var _this = this;
 
     // /Setup and override global defaults
     this.defaults = $.extend({
@@ -63,7 +63,8 @@ RobSlider.Slider = function(params)
     this.resize();
     
     // Cross browser document ready fires at different times in different browsers
-    that.dimensions();
-    
+    $(window).load(function(){
+        _this.dimensions();
+    });    
 
 }
