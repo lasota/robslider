@@ -48,3 +48,10 @@ slideList() - Animate the slide once current indexes are updated
     autocycle() - Autocycle slider and turn off once slider is interacted with by user
     resize() - Create event listeners for screen size checks
     mediaQuery() - Create event listeners for screen size checks
+
+
+
+
+
+Events:
+this.mainWrapper.trigger('SliderInteraction');

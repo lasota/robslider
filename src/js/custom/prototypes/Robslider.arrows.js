@@ -6,6 +6,9 @@ RobSlider.Slider.prototype.arrows = function ()
     this.mainWrapper.append('<div class="arrows right"></div><div class="arrows left"></div>');
 
     this.mainWrapper.on('click', '.arrows', function () {
+
+        _this.mainWrapper.trigger('SliderInteraction');
+
         if(_this.sliding == false){
             var left = $(this).hasClass('left');
 

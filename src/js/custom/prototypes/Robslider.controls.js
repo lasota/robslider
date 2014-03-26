@@ -8,6 +8,8 @@ RobSlider.Slider.prototype.controls = function ()
     this.list
         .on('movestart', '.current', function (e) {
 
+            _this.mainWrapper.trigger('SliderInteraction');
+
             _this.currentLeft = parseInt($(this).css('left'));
             // console.log(_this.currentLeft);
 

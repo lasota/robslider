@@ -1,13 +1,13 @@
 RobSlider.Slider.prototype.autocycle = function () {
-    var that = this;
+    var _this = this;
 
     //Start the cycler time to call the slide function
     var autoslide = setInterval(function () {
-            that.slide();
-        }, that.defaults.autocycleTime);
+            _this.slide();
+        }, _this.defaults.autocycleTime);
 
-    //Add click event to kill the autocycle
-    this.mainWrapper.on('click', function () {
+    //Add event to kill the autocycle
+    this.mainWrapper.on('SliderInteraction', function () {
         clearInterval(autoslide);
     });
 }

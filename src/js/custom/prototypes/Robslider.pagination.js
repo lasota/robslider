@@ -24,6 +24,9 @@ RobSlider.Slider.prototype.pagination = function () {
 
     // Add click events to the pagination divs
     this.pagination.on('click', 'div', function() {
+
+        _this.mainWrapper.trigger('SliderInteraction');
+        
         // Set the current index to the index of the pagination div clicked
         if(_this.sliding == false){
             var thisIndex = $(this).index();
